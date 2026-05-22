@@ -4,9 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>탁민우 ♥ 김진희 결혼합니다</title>
+
+<!-- ===== Open Graph / 카카오톡 공유 미리보기 ===== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="탁민우 ♥ 김진희 결혼합니다">
+<meta property="og:description" content="2026년 9월 12일 토요일 오전 11시 30분 · 개포동성당">
+<meta property="og:image" content="https://takminwoo.github.io/wedding/photo.jpg">
+<meta property="og:url" content="https://takminwoo.github.io/wedding/">
+<meta property="og:site_name" content="Minwoo & Jinhee Wedding">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f8e4c9692cb70ddb4f96a988c28616fd&autoload=false"></script>
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
 <style>
   :root {
     --color-bg: #FAF9F7;
@@ -21,14 +32,11 @@
     --font-body-kr: 'Noto Serif KR', serif;
     --font-body-sans: 'Noto Sans KR', sans-serif;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
   }
-
   body {
     font-family: var(--font-body-kr);
     background: var(--color-bg);
@@ -38,7 +46,6 @@
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
-
   /* ===== HERO ===== */
   .hero {
     position: relative;
@@ -51,20 +58,17 @@
     padding: 0 32px 80px;
     overflow: hidden;
   }
-
   .hero-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
   }
-
   .hero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
   }
-
   .hero-bg::after {
     content: '';
     position: absolute;
@@ -77,12 +81,10 @@
       rgba(0,0,0,0.45) 100%
     );
   }
-
   .hero-content {
     position: relative;
     z-index: 1;
   }
-
   .hero-label {
     font-family: var(--font-display);
     font-size: 13px;
@@ -93,13 +95,11 @@
     opacity: 0;
     animation: fadeUp 1s ease-out 0.5s forwards;
   }
-
   .hero-names {
     margin-bottom: 12px;
     opacity: 0;
     animation: fadeUp 1s ease-out 0.8s forwards;
   }
-
   .hero-names .name-en {
     font-family: var(--font-display);
     font-size: 44px;
@@ -109,7 +109,6 @@
     line-height: 1.2;
     text-shadow: 0 2px 20px rgba(0,0,0,0.15);
   }
-
   .hero-names .ampersand {
     font-family: var(--font-display);
     font-style: italic;
@@ -120,7 +119,6 @@
     margin: 6px 0;
     text-shadow: 0 2px 20px rgba(0,0,0,0.15);
   }
-
   .hero-names-kr {
     font-family: var(--font-body-kr);
     font-size: 16px;
@@ -132,7 +130,6 @@
     animation: fadeUp 1s ease-out 1s forwards;
     text-shadow: 0 1px 10px rgba(0,0,0,0.2);
   }
-
   .hero-date {
     font-family: var(--font-display);
     font-size: 14px;
@@ -143,7 +140,6 @@
     animation: fadeUp 1s ease-out 1.2s forwards;
     text-shadow: 0 1px 10px rgba(0,0,0,0.2);
   }
-
   .scroll-indicator {
     position: absolute;
     bottom: 24px;
@@ -154,12 +150,10 @@
     opacity: 0;
     animation: fadeInScroll 1s ease-out 1.6s forwards;
   }
-
   @keyframes fadeInScroll {
     from { opacity: 0; transform: translateX(-50%) translateY(20px); }
     to { opacity: 1; transform: translateX(-50%) translateY(0); }
   }
-
   .scroll-indicator span {
     display: block;
     width: 1px;
@@ -168,7 +162,6 @@
     margin: 0 auto 8px;
     animation: scrollPulse 2s ease-in-out infinite;
   }
-
   .scroll-indicator small {
     font-family: var(--font-display);
     font-size: 10px;
@@ -176,23 +169,18 @@
     text-transform: uppercase;
     color: rgba(255,255,255,0.5);
   }
-  }
-
   @keyframes scrollPulse {
     0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
     50% { opacity: 1; transform: scaleY(1); }
   }
-
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   /* ===== SECTIONS ===== */
   section {
     padding: 72px 32px;
   }
-
   .section-divider {
     display: flex;
     align-items: center;
@@ -200,7 +188,6 @@
     gap: 16px;
     margin-bottom: 48px;
   }
-
   .section-divider::before,
   .section-divider::after {
     content: '';
@@ -208,111 +195,102 @@
     height: 1px;
     background: var(--color-border);
   }
-
   .section-divider span {
     font-family: var(--font-display);
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--color-accent);
   }
-
+  .section-divider .ko-label {
+    font-family: var(--font-body-kr);
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: none;
+  }
   /* ===== GREETING ===== */
   .greeting {
     background: var(--color-bg);
     text-align: center;
   }
-
   .greeting-text {
     font-family: var(--font-body-kr);
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 300;
     line-height: 2.2;
     color: var(--color-text);
     word-break: keep-all;
   }
-
   .greeting-verse {
     font-family: var(--font-body-kr);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     color: var(--color-text-light);
-    margin-top: 8px;
+    margin-top: 10px;
     letter-spacing: 0.5px;
   }
-
   .greeting-message {
     font-family: var(--font-body-kr);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 2;
     color: var(--color-text);
-    margin-top: 32px;
+    margin-top: 36px;
     word-break: keep-all;
   }
-
   .greeting-names {
-    margin-top: 40px;
+    margin-top: 44px;
     font-family: var(--font-body-kr);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 2;
     color: var(--color-text);
   }
-
   .greeting-names p {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
-
   .greeting-names .parent-label {
     color: var(--color-text);
-    font-size: 13px;
+    font-size: 15px;
   }
-
   .greeting-names .parent-label-sub {
     color: var(--color-text-light);
-    font-size: 12px;
+    font-size: 14px;
   }
-
   .greeting-names strong {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1px;
   }
-
   .greeting-names .baptismal {
     font-family: var(--font-body-kr);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     color: var(--color-accent);
     margin-left: 4px;
   }
-
   /* ===== CALENDAR ===== */
   .calendar-section {
     background: var(--color-section-alt);
     text-align: center;
   }
-
   .calendar-info {
     font-family: var(--font-body-kr);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--color-text);
     line-height: 1.8;
     margin-bottom: 36px;
   }
-
   .calendar-info .date-highlight {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 400;
     color: var(--color-accent);
     display: block;
     margin-bottom: 8px;
     letter-spacing: 2px;
   }
-
   .mini-calendar {
     display: inline-block;
     background: var(--color-card);
@@ -320,132 +298,115 @@
     padding: 24px 28px;
     box-shadow: 0 2px 20px rgba(0,0,0,0.04);
   }
-
   .mini-calendar .cal-header {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 3px;
     color: var(--color-accent);
     margin-bottom: 16px;
     text-transform: uppercase;
   }
-
   .mini-calendar table {
     border-collapse: collapse;
     width: 100%;
   }
-
   .mini-calendar th {
     font-family: var(--font-body-sans);
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 400;
     color: var(--color-text-light);
-    padding: 4px 8px 8px;
+    padding: 4px 10px 8px;
   }
-
   .mini-calendar td {
     font-family: var(--font-body-sans);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     color: var(--color-text);
-    padding: 6px 8px;
+    padding: 7px 10px;
     text-align: center;
   }
-
   .mini-calendar td.sunday { color: #C47A7A; }
   .mini-calendar td.saturday { color: #7A9EC4; }
   .mini-calendar td.empty { color: transparent; }
-
   .mini-calendar td.wedding-day {
     background: var(--color-accent);
     color: #fff;
     border-radius: 50%;
     font-weight: 500;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
     padding: 0;
   }
-
   /* ===== COUNTDOWN ===== */
   .countdown-section {
     background: var(--color-bg);
     text-align: center;
     padding: 56px 32px;
   }
-
   .countdown-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 32px;
   }
-
   .countdown-item {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .countdown-number {
     font-family: var(--font-display);
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 300;
     color: var(--color-text);
     line-height: 1;
-    min-width: 56px;
+    min-width: 60px;
   }
-
   .countdown-label {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--color-accent);
     margin-top: 8px;
   }
-
   .countdown-colon {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 300;
     color: var(--color-border);
     line-height: 1;
     padding-top: 4px;
   }
-
   .countdown-message {
     margin-top: 28px;
     font-family: var(--font-body-kr);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--color-text-light);
   }
-
   /* ===== LOCATION ===== */
   .location-section {
     background: var(--color-section-alt);
     text-align: center;
   }
-
   .location-name {
     font-family: var(--font-body-kr);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     color: var(--color-text);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
-
   .location-address {
     font-family: var(--font-body-sans);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     color: var(--color-text-light);
     line-height: 1.8;
     margin-bottom: 28px;
   }
-
   .map-container {
     width: 100%;
     height: 280px;
@@ -455,21 +416,19 @@
     margin-bottom: 24px;
     background: #e8e4df;
   }
-
   .map-buttons {
     display: flex;
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
   }
-
   .map-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 10px 20px;
+    padding: 11px 22px;
     font-family: var(--font-body-sans);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--color-text);
     background: var(--color-card);
@@ -478,17 +437,14 @@
     text-decoration: none;
     transition: all 0.3s ease;
   }
-
   .map-btn:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);
   }
-
   .map-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
   }
-
   /* ===== TRANSPORT INFO ===== */
   .transport-info {
     margin-top: 40px;
@@ -497,10 +453,9 @@
     border-radius: 12px;
     text-align: left;
   }
-
   .transport-notice {
     font-family: var(--font-body-kr);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     color: var(--color-text);
     text-align: center;
@@ -508,10 +463,9 @@
     margin-bottom: 24px;
     word-break: keep-all;
   }
-
   .transport-title {
     font-family: var(--font-body-kr);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--color-accent);
     text-align: center;
@@ -519,88 +473,80 @@
     padding-bottom: 12px;
     border-bottom: 1px solid var(--color-border);
   }
-
   .transport-item {
-    padding: 12px 0;
+    padding: 14px 0;
     border-bottom: 1px dashed var(--color-border);
   }
-
   .transport-item:last-child {
     border-bottom: none;
   }
-
   .transport-line {
     font-family: var(--font-body-kr);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     color: var(--color-text);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
-
   .transport-line strong {
     font-weight: 500;
     color: var(--color-text);
   }
-
   .transport-detail {
     font-family: var(--font-body-sans);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     color: var(--color-text-light);
     line-height: 1.6;
     padding-left: 4px;
   }
-
-  /* ===== FLOWER NOTICE ===== */
+  /* ===== FLOWER NOTICE (별도 섹션) ===== */
+  .flower-section {
+    background: var(--color-bg);
+    text-align: center;
+    padding: 56px 32px;
+  }
   .flower-notice {
-    margin-top: 28px;
-    padding: 24px 20px;
+    padding: 28px 24px;
     background: #FFF8F8;
     border: 1px solid #F5D8D8;
     border-radius: 12px;
     text-align: center;
   }
-
   .flower-title {
     font-family: var(--font-body-kr);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #C04545;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
-
   .flower-desc {
     font-family: var(--font-body-kr);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     color: var(--color-text-light);
-    line-height: 1.8;
+    line-height: 1.9;
     word-break: keep-all;
   }
-
   /* ===== ACCOUNT ===== */
   .account-section {
-    background: var(--color-bg);
+    background: var(--color-section-alt);
     text-align: center;
   }
-
   .account-desc {
     font-family: var(--font-body-kr);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     color: var(--color-text-light);
     line-height: 1.9;
     margin-bottom: 36px;
     word-break: keep-all;
   }
-
   .account-group {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
-
   .account-group-title {
     font-family: var(--font-body-kr);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     color: var(--color-text);
     margin-bottom: 12px;
@@ -609,94 +555,35 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 14px 0;
+    padding: 16px 0;
     border: 1px solid var(--color-border);
     border-radius: 8px;
     background: var(--color-card);
     transition: all 0.3s ease;
   }
-
   .account-group-title:hover {
     border-color: var(--color-accent-light);
   }
-
   .account-group-title .arrow {
-    font-size: 10px;
+    font-size: 11px;
     transition: transform 0.3s ease;
     color: var(--color-text-light);
   }
-
   .account-group-title.open .arrow {
     transform: rotate(180deg);
   }
-
   .account-list {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.4s ease;
   }
-
   .account-list.open {
-    max-height: 300px;
+    max-height: 400px;
     padding: 16px 0;
   }
-
-  .account-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    margin-bottom: 8px;
-  }
-
-  .account-info {
-    text-align: left;
-  }
-
-  .account-bank {
-    font-family: var(--font-body-sans);
-    font-size: 12px;
-    color: var(--color-text-light);
-  }
-
-  .account-number {
-    font-family: var(--font-body-sans);
-    font-size: 14px;
-    color: var(--color-text);
-    margin-top: 2px;
-  }
-
-  .account-holder {
-    font-family: var(--font-body-sans);
-    font-size: 12px;
-    color: var(--color-text-light);
-    margin-top: 2px;
-  }
-
-  .copy-btn {
-    font-family: var(--font-body-sans);
-    font-size: 11px;
-    padding: 6px 14px;
-    border: 1px solid var(--color-accent-light);
-    border-radius: 20px;
-    background: transparent;
-    color: var(--color-accent);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
-
-  .copy-btn:hover {
-    background: var(--color-accent);
-    color: #fff;
-  }
-
   .account-placeholder {
     font-family: var(--font-body-sans);
-    font-size: 13px;
+    font-size: 14px;
     color: var(--color-text-light);
     padding: 20px;
     background: var(--color-card);
@@ -704,28 +591,78 @@
     border-radius: 8px;
     text-align: center;
   }
-
+  /* ===== SHARE SECTION ===== */
+  .share-section {
+    background: var(--color-bg);
+    text-align: center;
+    padding: 56px 32px;
+  }
+  .share-desc {
+    font-family: var(--font-body-kr);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+  .share-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    font-family: var(--font-body-kr);
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .share-btn.kakao {
+    background: #FEE500;
+    color: #3C1E1E;
+  }
+  .share-btn.kakao:hover {
+    background: #FDD800;
+  }
+  .share-btn.link {
+    background: var(--color-card);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+  .share-btn.link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .share-btn svg {
+    width: 18px;
+    height: 18px;
+  }
   /* ===== FOOTER ===== */
   .footer {
     text-align: center;
     padding: 48px 32px;
-    background: var(--color-section-alt);
+    background: var(--color-bg);
     border-top: 1px solid var(--color-border);
   }
-
   .footer-heart {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--color-accent);
     margin-bottom: 12px;
   }
-
   .footer-text {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 3px;
     color: var(--color-text-light);
   }
-
   /* ===== TOAST ===== */
   .toast {
     position: fixed;
@@ -735,7 +672,7 @@
     background: var(--color-text);
     color: #fff;
     font-family: var(--font-body-sans);
-    font-size: 13px;
+    font-size: 14px;
     padding: 12px 24px;
     border-radius: 24px;
     opacity: 0;
@@ -743,19 +680,16 @@
     transition: all 0.3s ease;
     z-index: 100;
   }
-
   .toast.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
-
   /* ===== FADE-IN ON SCROLL ===== */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
-
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
@@ -763,7 +697,6 @@
 </style>
 </head>
 <body>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
@@ -907,7 +840,6 @@
         구글맵
       </a>
     </div>
-
     <div class="transport-info">
       <p class="transport-notice">
         지하주차장이 협소하오니,<br>
@@ -927,7 +859,12 @@
         <div class="transport-detail">472, 2413, 3414, 4432<br>개포1동주민센터 정류장 하차, 도보 10분</div>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- FLOWER NOTICE (별도 섹션) -->
+<section class="flower-section">
+  <div class="reveal">
     <div class="flower-notice">
       <p class="flower-title">🌸 화환은 정중히 사양합니다.</p>
       <p class="flower-desc">
@@ -942,13 +879,12 @@
 <!-- ACCOUNT -->
 <section class="account-section">
   <div class="reveal">
-    <div class="section-divider"><span>마음을 전하실 곳</span></div>
+    <div class="section-divider"><span class="ko-label">마음을 전하실 곳</span></div>
     <p class="account-desc">
       축하의 마음을 전하고 싶으신 분들을 위해,<br>
       계좌번호를 안내드립니다.<br>
       따뜻한 축하에 진심으로 감사드립니다.
     </p>
-
     <div class="account-group">
       <div class="account-group-title" onclick="toggleAccount(this)">
         신랑측 계좌번호 <span class="arrow">▼</span>
@@ -959,7 +895,6 @@
         </div>
       </div>
     </div>
-
     <div class="account-group">
       <div class="account-group-title" onclick="toggleAccount(this)">
         신부측 계좌번호 <span class="arrow">▼</span>
@@ -969,6 +904,26 @@
           계좌 정보 준비 중입니다
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE -->
+<section class="share-section">
+  <div class="reveal">
+    <div class="section-divider"><span>Share</span></div>
+    <p class="share-desc">
+      소중한 분들에게 청첩장을 전해보세요
+    </p>
+    <div class="share-buttons">
+      <button class="share-btn kakao" onclick="shareKakao()">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.745 1.795 5.16 4.5 6.526L5.4 21l4.026-2.43c.84.137 1.706.21 2.574.21 5.523 0 10-3.477 10-7.98C22 6.477 17.523 3 12 3z"/></svg>
+        카카오톡 공유
+      </button>
+      <button class="share-btn link" onclick="copyLink()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        링크 복사
+      </button>
     </div>
   </div>
 </section>
@@ -985,11 +940,9 @@
 <script>
   // ===== COUNTDOWN =====
   const weddingDate = new Date('2026-09-12T11:30:00+09:00');
-
   function updateCountdown() {
     const now = new Date();
     const diff = weddingDate - now;
-
     if (diff <= 0) {
       document.getElementById('cd-days').textContent = '0';
       document.getElementById('cd-hours').textContent = '00';
@@ -998,43 +951,37 @@
       document.getElementById('cd-message').textContent = '오늘, 두 사람이 하나가 됩니다.';
       return;
     }
-
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
     document.getElementById('cd-days').textContent = days;
     document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
     document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
     document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
     document.getElementById('cd-message').textContent = `민우 ♥ 진희의 결혼식까지 ${days}일 남았습니다.`;
   }
-
   updateCountdown();
   setInterval(updateCountdown, 1000);
+
+  // ===== TOAST UTIL =====
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  }
 
   // ===== ACCOUNT TOGGLE =====
   function toggleAccount(el) {
     const list = el.nextElementSibling;
     const isOpen = list.classList.contains('open');
-    
     document.querySelectorAll('.account-list').forEach(l => l.classList.remove('open'));
     document.querySelectorAll('.account-group-title').forEach(t => t.classList.remove('open'));
-    
     if (!isOpen) {
       list.classList.add('open');
       el.classList.add('open');
     }
-  }
-
-  // ===== COPY ACCOUNT =====
-  function copyAccount(text) {
-    navigator.clipboard.writeText(text).then(() => {
-      const toast = document.getElementById('toast');
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2000);
-    });
   }
 
   // ===== SCROLL REVEAL =====
@@ -1045,45 +992,83 @@
       }
     });
   }, { threshold: 0.15 });
-
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   // ===== KAKAO MAP =====
   kakao.maps.load(function() {
     const container = document.getElementById('kakao-map');
-    const churchPosition = new kakao.maps.LatLng(37.482526, 127.048547);
-    
+    const churchPosition = new kakao.maps.LatLng(37.4832948, 127.0628266);
     const options = {
       center: churchPosition,
       level: 3,
       draggable: true,
       scrollwheel: false
     };
-    
     const map = new kakao.maps.Map(container, options);
-    
-    // 마커 표시
     const marker = new kakao.maps.Marker({
       position: churchPosition,
       map: map
     });
-    
-    // 인포윈도우(말풍선)
-    const iwContent = '<div style="padding:8px 12px;font-size:12px;font-family:\'Noto Serif KR\',serif;color:#2C2C2C;white-space:nowrap;">개포동성당</div>';
+    const iwContent = '<div style="padding:8px 12px;font-size:13px;font-family:\'Noto Serif KR\',serif;color:#2C2C2C;white-space:nowrap;">개포동성당</div>';
     const infowindow = new kakao.maps.InfoWindow({
       content: iwContent,
       removable: false
     });
     infowindow.open(map, marker);
-    
-    // 줌 컨트롤 추가
     const zoomControl = new kakao.maps.ZoomControl();
     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-    
-    // 모바일 핀치 줌은 가능하게, 마우스 휠은 막음
     map.setZoomable(true);
   });
-</script>
 
+  // ===== KAKAO SHARE =====
+  if (window.Kakao && !Kakao.isInitialized()) {
+    Kakao.init('f8e4c9692cb70ddb4f96a988c28616fd');
+  }
+
+  function shareKakao() {
+    if (!window.Kakao || !Kakao.isInitialized()) {
+      showToast('카카오 SDK를 불러오는 중입니다');
+      return;
+    }
+    Kakao.Share.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '탁민우 ♥ 김진희 결혼합니다',
+        description: '2026년 9월 12일 토요일 오전 11시 30분\n개포동성당',
+        imageUrl: 'https://takminwoo.github.io/wedding/photo.jpg',
+        link: {
+          mobileWebUrl: 'https://takminwoo.github.io/wedding/',
+          webUrl: 'https://takminwoo.github.io/wedding/'
+        }
+      },
+      buttons: [
+        {
+          title: '청첩장 열기',
+          link: {
+            mobileWebUrl: 'https://takminwoo.github.io/wedding/',
+            webUrl: 'https://takminwoo.github.io/wedding/'
+          }
+        }
+      ]
+    });
+  }
+
+  // ===== COPY LINK =====
+  function copyLink() {
+    const url = 'https://takminwoo.github.io/wedding/';
+    navigator.clipboard.writeText(url).then(() => {
+      showToast('링크가 복사되었습니다');
+    }).catch(() => {
+      // 폴백
+      const textArea = document.createElement('textarea');
+      textArea.value = url;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      showToast('링크가 복사되었습니다');
+    });
+  }
+</script>
 </body>
 </html>
