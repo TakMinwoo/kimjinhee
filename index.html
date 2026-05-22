@@ -16,6 +16,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/NanumSquareRound.css">
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f8e4c9692cb70ddb4f96a988c28616fd&autoload=false"></script>
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
 <style>
@@ -575,21 +576,132 @@
   .account-list {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    transition: max-height 0.5s ease, padding 0.5s ease;
   }
   .account-list.open {
-    max-height: 400px;
-    padding: 16px 0;
+    max-height: 1200px;
+    padding: 12px 0 4px;
   }
-  .account-placeholder {
+  .account-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .account-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .bank-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body-sans);
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .bank-logo.shinhan { background: #0046ff; }
+  .bank-logo.kb { background: #ffbc00; color: #3c2c00; }
+  .bank-logo.kakao { background: #ffe300; color: #3c1e1e; }
+  .bank-logo.ibk { background: #00558b; }
+  .bank-logo.nh { background: #00a96e; }
+  .bank-logo.woori { background: #0067ac; }
+  .bank-logo.hana { background: #008c95; }
+  .bank-logo.default { background: var(--color-accent); }
+  .account-card-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .account-card-role {
+    font-family: var(--font-body-kr);
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-bottom: 2px;
+  }
+  .account-card-bank {
+    font-family: var(--font-body-kr);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+  }
+  .account-card-bank .holder-name {
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-left: 6px;
+    font-size: 13px;
+  }
+  .account-number-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--color-section-alt);
+    border-radius: 8px;
+  }
+  .account-number-text {
     font-family: var(--font-body-sans);
     font-size: 14px;
-    color: var(--color-text-light);
-    padding: 20px;
-    background: var(--color-card);
-    border: 1px dashed var(--color-border);
+    font-weight: 500;
+    color: var(--color-text);
+    letter-spacing: 0.3px;
+    flex: 1;
+    text-align: left;
+  }
+  .copy-btn {
+    font-family: var(--font-body-kr);
+    font-size: 12px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 16px;
+    background: var(--color-accent);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-weight: 400;
+  }
+  .copy-btn:hover {
+    background: #9d7d56;
+  }
+  .copy-btn:active {
+    transform: scale(0.96);
+  }
+  .pay-buttons {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .pay-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 9px 8px;
+    font-family: var(--font-body-kr);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
     border-radius: 8px;
-    text-align: center;
+    transition: opacity 0.2s ease;
+  }
+  .pay-btn:hover { opacity: 0.85; }
+  .pay-btn.kakaopay {
+    background: #FFE812;
+    color: #3C1E1E;
+  }
+  .pay-btn.toss {
+    background: #0064FF;
+    color: #fff;
   }
   /* ===== SHARE SECTION ===== */
   .share-section {
@@ -890,8 +1002,56 @@
         신랑측 계좌번호 <span class="arrow">▼</span>
       </div>
       <div class="account-list">
-        <div class="account-placeholder">
-          계좌 정보 준비 중입니다
+        <div class="account-card">
+          <div class="account-card-top">
+            <div class="bank-logo ibk">IBK</div>
+            <div class="account-card-info">
+              <div class="account-card-role">신랑</div>
+              <div class="account-card-bank">기업은행 <span class="holder-name">탁민우</span></div>
+            </div>
+          </div>
+          <div class="account-number-row">
+            <span class="account-number-text">067-062934-01-016</span>
+            <button class="copy-btn" onclick="copyAccount('067-062934-01-016')">복사</button>
+          </div>
+          <div class="pay-buttons">
+            <a class="pay-btn kakaopay" href="https://qr.kakaopay.com/" target="_blank">카카오페이</a>
+            <a class="pay-btn toss" href="supertoss://send?bank=기업은행&accountNo=067-062934-01-016" target="_blank">토스</a>
+          </div>
+        </div>
+        <div class="account-card">
+          <div class="account-card-top">
+            <div class="bank-logo ibk">IBK</div>
+            <div class="account-card-info">
+              <div class="account-card-role">신랑 어머니</div>
+              <div class="account-card-bank">기업은행 <span class="holder-name">김순임</span></div>
+            </div>
+          </div>
+          <div class="account-number-row">
+            <span class="account-number-text">042-005419-03-012</span>
+            <button class="copy-btn" onclick="copyAccount('042-005419-03-012')">복사</button>
+          </div>
+          <div class="pay-buttons">
+            <a class="pay-btn kakaopay" href="https://qr.kakaopay.com/" target="_blank">카카오페이</a>
+            <a class="pay-btn toss" href="supertoss://send?bank=기업은행&accountNo=042-005419-03-012" target="_blank">토스</a>
+          </div>
+        </div>
+        <div class="account-card">
+          <div class="account-card-top">
+            <div class="bank-logo kakao">k</div>
+            <div class="account-card-info">
+              <div class="account-card-role">신랑 아버지</div>
+              <div class="account-card-bank">카카오뱅크 <span class="holder-name">탁정환</span></div>
+            </div>
+          </div>
+          <div class="account-number-row">
+            <span class="account-number-text">3333-00-0000000</span>
+            <button class="copy-btn" onclick="copyAccount('3333-00-0000000')">복사</button>
+          </div>
+          <div class="pay-buttons">
+            <a class="pay-btn kakaopay" href="https://qr.kakaopay.com/" target="_blank">카카오페이</a>
+            <a class="pay-btn toss" href="supertoss://send?bank=카카오뱅크&accountNo=3333-00-0000000" target="_blank">토스</a>
+          </div>
         </div>
       </div>
     </div>
@@ -900,8 +1060,56 @@
         신부측 계좌번호 <span class="arrow">▼</span>
       </div>
       <div class="account-list">
-        <div class="account-placeholder">
-          계좌 정보 준비 중입니다
+        <div class="account-card">
+          <div class="account-card-top">
+            <div class="bank-logo kakao">k</div>
+            <div class="account-card-info">
+              <div class="account-card-role">신부</div>
+              <div class="account-card-bank">카카오뱅크 <span class="holder-name">김진희</span></div>
+            </div>
+          </div>
+          <div class="account-number-row">
+            <span class="account-number-text">3333-05-5550719</span>
+            <button class="copy-btn" onclick="copyAccount('3333-05-5550719')">복사</button>
+          </div>
+          <div class="pay-buttons">
+            <a class="pay-btn kakaopay" href="https://qr.kakaopay.com/" target="_blank">카카오페이</a>
+            <a class="pay-btn toss" href="supertoss://send?bank=카카오뱅크&accountNo=3333-05-5550719" target="_blank">토스</a>
+          </div>
+        </div>
+        <div class="account-card">
+          <div class="account-card-top">
+            <div class="bank-logo shinhan">SH</div>
+            <div class="account-card-info">
+              <div class="account-card-role">신부 아버지</div>
+              <div class="account-card-bank">신한은행 <span class="holder-name">김종춘</span></div>
+            </div>
+          </div>
+          <div class="account-number-row">
+            <span class="account-number-text">110-011-558163</span>
+            <button class="copy-btn" onclick="copyAccount('110-011-558163')">복사</button>
+          </div>
+          <div class="pay-buttons">
+            <a class="pay-btn kakaopay" href="https://qr.kakaopay.com/" target="_blank">카카오페이</a>
+            <a class="pay-btn toss" href="supertoss://send?bank=신한은행&accountNo=110-011-558163" target="_blank">토스</a>
+          </div>
+        </div>
+        <div class="account-card">
+          <div class="account-card-top">
+            <div class="bank-logo kb">KB</div>
+            <div class="account-card-info">
+              <div class="account-card-role">신부 어머니</div>
+              <div class="account-card-bank">국민은행 <span class="holder-name">이명신</span></div>
+            </div>
+          </div>
+          <div class="account-number-row">
+            <span class="account-number-text">026-24-0311-657</span>
+            <button class="copy-btn" onclick="copyAccount('026-24-0311-657')">복사</button>
+          </div>
+          <div class="pay-buttons">
+            <a class="pay-btn kakaopay" href="https://qr.kakaopay.com/" target="_blank">카카오페이</a>
+            <a class="pay-btn toss" href="supertoss://send?bank=국민은행&accountNo=026-24-0311-657" target="_blank">토스</a>
+          </div>
         </div>
       </div>
     </div>
@@ -984,6 +1192,33 @@
     }
   }
 
+  // ===== COPY ACCOUNT NUMBER =====
+  function copyAccount(accountNumber) {
+    const text = accountNumber.replace(/-/g, ''); // 복사 시에는 하이픈 제거
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('계좌번호가 복사되었습니다');
+      }).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+  function fallbackCopy(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      showToast('계좌번호가 복사되었습니다');
+    } catch (e) {
+      showToast('복사에 실패했습니다');
+    }
+    document.body.removeChild(textArea);
+  }
+
   // ===== SCROLL REVEAL =====
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1009,7 +1244,7 @@
       position: churchPosition,
       map: map
     });
-    const iwContent = '<div style="padding:8px 12px;font-size:13px;font-family:\'Noto Serif KR\',serif;color:#2C2C2C;white-space:nowrap;">개포동성당</div>';
+    const iwContent = '<div style="padding:8px 16px;font-size:13px;font-family:\'NanumSquareRound\',\'NanumSquare\',sans-serif;font-weight:700;color:#2C2C2C;white-space:nowrap;text-align:center;">개포동성당</div>';
     const infowindow = new kakao.maps.InfoWindow({
       content: iwContent,
       removable: false
