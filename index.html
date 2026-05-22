@@ -1005,7 +1005,7 @@
       <p class="flower-desc">
         <strong>
         예식장소인 성당 사정상,<br>
-        화환과 꽃바구니는 정중히 사양하며,<br>
+        화환과 꽃바구니는<br>
         접수가 불가함을 알려드립니다.
         </strong>
       </p>
@@ -1256,12 +1256,37 @@
       position: churchPosition,
       map: map
     });
-    const iwContent = '<div style="padding:8px 16px;font-size:13px;font-family:\'NanumSquareRound\',\'NanumSquare\',sans-serif;font-weight:700;color:#2C2C2C;white-space:nowrap;text-align:center;">개포동성당</div>';
-    const infowindow = new kakao.maps.InfoWindow({
-      content: iwContent,
-      removable: false
-    });
-    infowindow.open(map, marker);
+    
+    // 기존 InfoWindow 대신 CustomOverlay 사용
+  const overlayContent = `
+    <div style="
+      padding:7px 12px;
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:16px;
+      font-size:13px;
+      font-family:'NanumSquareRound','NanumSquare',sans-serif;
+      font-weight:700;
+      color:#2C2C2C;
+      white-space:nowrap;
+      text-align:center;
+      box-shadow:0 2px 6px rgba(0,0,0,0.15);
+      line-height:1.2;
+    ">
+      개포동성당
+    </div>
+  `;
+
+  const customOverlay = new kakao.maps.CustomOverlay({
+    position: churchPosition,
+    content: overlayContent,
+    xAnchor: 0.5, // 가로 중앙
+    yAnchor: 2.2  // 마커 위쪽으로 띄우기
+  });
+
+  customOverlay.setMap(map);
+
+
     const zoomControl = new kakao.maps.ZoomControl();
     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
     map.setZoomable(true);
